@@ -1,7 +1,8 @@
 package Clientes;
 import java.time.LocalDate;
+import java.time.Period;
 
-public class Persona {
+public class Cliente{
 protected String nombre;
 protected int identificacion;
 protected String fechaNacimiento;
@@ -10,7 +11,7 @@ protected int telefono;
 protected String correo;
 protected String nacionalidad;
 
-    public Persona(String nombre, int identificacion, int edad, int telefono, String correo, String nacionalidad) {
+    public Cliente(String nombre, int identificacion, int edad, int telefono, String correo, String nacionalidad) {
         this.nombre = nombre;
         this.identificacion = identificacion;
         this.edad = edad;
@@ -45,5 +46,10 @@ protected String nacionalidad;
     public void setCorreo(String correo) {
         this.correo = correo;
     }
- 
+ public int calcularEdad(String fechaNacimiento){
+        LocalDate fechaActual = LocalDate.now();
+        Period periodo = Period.between((parseint(fechaNacimiento)), fechaActual);
+        int años = periodo.getYears();
+        System.out.println("Edad exacta: " + años + ".")
+}
 }
