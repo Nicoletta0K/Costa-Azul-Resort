@@ -1,5 +1,4 @@
-package clientes;
-
+package CostaAzulResort;
 public class Cliente {
     
 }
